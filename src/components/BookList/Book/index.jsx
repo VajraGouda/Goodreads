@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom";
 
 
 const Book = (props) => {
-    const { title, image } = props.data;
+    const { id, title, image } = props.data;
 
     return (
         <div className="col-sm-3">
@@ -11,7 +12,7 @@ const Book = (props) => {
                     <div className="card-title">
                         {title}
                     </div>
-                    <a href="#" className="btn btn-dark btn-block">Show Details</a>
+                    <Link to={'/books/detail/' + id} className="btn btn-dark btn-block">Show Details</Link>
                 </div>
             </div>
         </div>
